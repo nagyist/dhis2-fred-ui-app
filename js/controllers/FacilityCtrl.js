@@ -77,7 +77,7 @@ fredApp.controller('FacilityCtrl', ['$scope', '$rootScope', '$routeParams', '$lo
       });
     } else {
       FacilityResource.save($scope.facility, function() {
-        // $location.path('#!/facilities');
+        $location.path('#!/facilities');
       }, function(data) {
         console.log(data);
       });
