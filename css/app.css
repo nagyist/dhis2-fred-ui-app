@@ -1,0 +1,18 @@
+body {
+    padding-top : 52px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display : none !important;
+}
+
+.google-map {
+    -webkit-box-sizing : content-box;
+    -moz-box-sizing    : content-box;
+    box-sizing         : content-box;
+}
+
+#infoWindow {
+    width: 120px;
+    height: 100px;
+}

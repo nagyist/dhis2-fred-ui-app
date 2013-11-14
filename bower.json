@@ -1,0 +1,26 @@
+{
+  "name": "FRED UI",
+  "version": "0.0.0",
+  "authors": [
+    "Morten Olav Hansen <mortenoh@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.0.x",
+    "jquery": "2.0.x",
+    "angular": "1.2.x",
+    "angular-resource": "1.2.x",
+    "angular-route": "1.2.x",
+    "font-awesome": "4.0.x",
+    "modernizr": "2.6.x",
+    "google-maps-utility-library-v3": "*"
+  }
+}
