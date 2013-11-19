@@ -6,6 +6,9 @@ var fredApp = angular.module('FredApp', [ 'ngRoute', 'ngResource' ])
     $routeProvider.when('/facilities', {
       templateUrl: 'partials/facility-list.html',
       controller: 'FacilityListCtrl'
+    }).when('/facilities/tree/:parent?', {
+        templateUrl: 'partials/facility-tree.html',
+        controller: 'FacilityTreeCtrl'
     }).when('/facilities/new', {
         templateUrl: 'partials/facility.html',
         controller: 'FacilityCtrl'
@@ -30,3 +33,13 @@ var fredApp = angular.module('FredApp', [ 'ngRoute', 'ngResource' ])
       baseUrl = data.activities.dhis.href;
     });
   }]);
+
+fredApp.run( ['$rootScope', function( $rootScope ) {
+  $rootScope.clearInfo = function() {
+    $rootScope.infoMsg = undefined;
+  };
+
+  $rootScope.clearAlert = function() {
+    $rootScope.alertMsg = undefined;
+  };
+}]);

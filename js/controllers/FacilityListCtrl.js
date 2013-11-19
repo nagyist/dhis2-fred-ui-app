@@ -8,16 +8,16 @@ fredApp.controller('FacilityListCtrl', ['$scope', '$rootScope', '$location', 'Fa
     $("#menu").collapse('hide');
   }
 
-  $rootScope.alertMsg = undefined;
-  $rootScope.infoMsg = undefined;
+  $rootScope.clearAlert();
+  $rootScope.clearInfo();
 
   var queryString = $location.search();
   refreshFacilityList();
 
   function refreshFacilityList() {
     $scope.facilities = FacilityResource.query({
-      limit: queryString .limit,
-      offset: queryString .offset
+      limit: queryString.limit,
+      offset: queryString.offset
     }, function(data) {
       $scope.previous = data.meta.offset > 0;
       $scope.next = (data.meta.total - data.meta.offset ) >= data.meta.limit;
@@ -33,13 +33,5 @@ fredApp.controller('FacilityListCtrl', ['$scope', '$rootScope', '$location', 'Fa
         $rootScope.alertMsg = data.data.message;
       });
     }
-  };
-
-  $rootScope.clearInfo = function() {
-    $rootScope.infoMsg = undefined;
-  };
-
-  $rootScope.clearAlert = function() {
-    $rootScope.alertMsg = undefined;
   };
 }]);

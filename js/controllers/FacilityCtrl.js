@@ -2,10 +2,10 @@
 fredApp.controller('FacilityCtrl', ['$scope', '$rootScope', '$routeParams', '$location', 'FacilityResource', 'DataSetResource',
   function( $scope, $rootScope, $routeParams, $location, FacilityResource, DataSetResource ) {
 
-  $rootScope.alertMsg = undefined;
-  $rootScope.infoMsg = undefined;
-
   angular.element('#menu').children().removeClass('active');
+
+  $rootScope.clearAlert();
+  $rootScope.clearInfo();
 
   $scope.dataSets = DataSetResource.query();
 
