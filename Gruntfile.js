@@ -112,7 +112,8 @@ module.exports = function( grunt ) {
             cwd: '<%= pkg.src %>',
             dest: '<%= pkg.dst %>',
             src: [
-              'img/**/*'
+              'img/**/*',
+              'partials/**/*'
             ]
           }
         ]
