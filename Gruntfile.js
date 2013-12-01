@@ -126,7 +126,7 @@ module.exports = function( grunt ) {
     var o = {
       "name": "FRED UI",
       "description": "A simple frontend to the DHIS2 FRED-API Implementation.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "developer": {
         "name": "Morten Olav Hansen",
         "email": "mortenoh@gmail.com"
